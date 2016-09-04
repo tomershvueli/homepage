@@ -15,15 +15,6 @@ Mousetrap.bind('r', function() {
   setTimeout(setBgImg, 15000);
 });
 
-Mousetrap.bind('j j', function() {
-  var bg = $('#homepage').css('background-image');
-  bg = bg.replace('url(','').replace(')','');
-
-  $.ajax({
-    url: "hp_assets/lib/ajax_download_bg_img.php?bg_url=" + bg
-  });
-});
-
 Mousetrap.bind('1', function() {
   if (!menuHidden) {
     var link = $(".link:eq(0) a").attr("href");
