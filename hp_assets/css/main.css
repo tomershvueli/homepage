@@ -1,0 +1,16 @@
+body {font-family: sans-serif; background: url("../img/sayagata-400px.png") repeat;}
+
+#homepage {background-size: cover;}
+
+.menu-item {display: none;}
+
+#links-wrap {font-size: 80px; width: 50%; height: 50%; border-radius: 5px; background-color: rgba(0, 0, 0, .5); margin: 15% auto 0; overflow: hidden; padding: 50px;}
+#links-wrap a {color: #fff; transition: .3s all;}
+#links-wrap a:hover {color: #00AB00;}
+#links-wrap .link {display: inline-block; width: 33%; float: left; text-align: center;}
+
+#pic-info-wrap {color: #fff; font-size: 16px; border-radius: 5px; background-color: rgba(0, 0, 0, .5); padding: 20px; position: absolute; bottom: 15px; left: 15px;}
+#pic-info-wrap a {color: #fff;}
+#pic-info-wrap a:hover, #pic-info-wrap a:active {color: #fff; text-decoration: none;}
+
+#clock-wrap {color: #fff; border-radius: 5px; background-color: rgba(0, 0, 0, .5); font-size: 30px; padding: 20px; position: absolute; top: 15px; right: 15px;}

@@ -1,0 +1,52 @@
+{
+	"title" : "My Homepage",
+	/*
+		Choose unlock pattern from Mousetrap: https://craig.is/killing/mice
+	*/
+	"unlock_pattern" : "space",
+	/*
+		Choose pattern format from PHP's date function: http://php.net/manual/en/function.date.php
+	*/
+	"clock_format" : "H:i j/n/Y",
+	/* 
+		Get Unsplash client ID from Unsplash: https://unsplash.com/developers
+	*/
+	"unsplash_client_id" : "",
+	/* 
+		The menu will be in a grid of 3 icons per row on desktop. 
+		Insert any link you'd like, or {{cur}} for the current URL of the page.
+		Choose icons from Font Awesome: http://fontawesome.io/icons/
+	*/
+	"items" : [
+		{
+			"alt" : "Facebook",
+			"icon" : "facebook",
+			"link" : "http://facebook.com"
+		},
+		{
+			"alt" : "Twitter",
+			"icon" : "twitter",
+			"link" : "http://twitter.com"
+		},
+		{
+			"alt" : "Trello",
+			"icon" : "trello",
+			"link" : "http://trello.com"
+		},
+		{
+			"alt" : "TTRSS",
+			"icon" : "reader",
+			"link" : "{{cur}}/ttrss"
+		},
+		{
+			"alt" : "phpMyAdmin",
+			"icon" : "database",
+			"link" : "{{cur}}:3306/phpMyAdmin"
+		},
+		{
+			"alt" : "Plex",
+			"icon" : "film",
+			"link" : "{{cur}}:32400/web/"
+		}
+	]
+}
