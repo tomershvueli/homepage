@@ -1,7 +1,6 @@
 body {font-family: sans-serif; background: url("../img/sayagata-400px.png") repeat;}
 
-#homepage {background-size: cover;}
-
+.hidden {display: none;}
 .menu-item {display: none;}
 
 #links-wrap {font-size: 80px; width: 50%; height: 50%; border-radius: 5px; background-color: rgba(0, 0, 0, .5); margin: 15% auto 0; overflow: hidden; padding: 50px;}

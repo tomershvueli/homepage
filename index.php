@@ -44,7 +44,7 @@
 			?>
 		</div>
 
-		<div id="pic-info-wrap" class="menu-item">
+		<div id="pic-info-wrap" class="menu-item<?=($config['unsplash_client_id'] == '') ? ' hidden' : ''; ?>">
 			<span id="pic-info">Picture by <a href="<?= $image_user_url; ?>" id="pic-info-url"><?= $image_user_name; ?></a></span>
 		</div>
 
