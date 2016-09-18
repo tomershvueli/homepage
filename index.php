@@ -26,6 +26,7 @@
 	</head>
 
 	<body id="homepage" onload="updateClock(); setInterval('updateClock()', 5000);">
+		<div id="bg-overlay">&nbsp;</div>
 		<!-- Line below is to preload the font when the page loads -->
 		<span class="fa fa-asterisk" style="opacity: 0;">&nbsp;</span>
 
