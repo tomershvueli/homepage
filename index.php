@@ -4,7 +4,7 @@
 	*/
 
 	session_start();
-	
+
 	$config = json_decode(file_get_contents("config.json"), true);
 
 	function get_current_url() {
@@ -46,7 +46,7 @@
 		</div>
 
 		<div id="pic-info-wrap" class="menu-item<?=($config['unsplash_client_id'] == '') ? ' hidden' : ''; ?>">
-			<span id="pic-info">Picture by <a href="<?= $image_user_url; ?>" id="pic-info-url"><?= $image_user_name; ?></a></span>
+			<span id="pic-info">Picture by <a href="#" id="pic-info-url"></a></span>
 		</div>
 
 		<script type="text/javascript" src="hp_assets/js/jquery.min.js"></script>
