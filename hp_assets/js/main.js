@@ -86,6 +86,7 @@ function setBgImg() {
       if (bg != "" && bg != null) {
         preloadimages([bg]).done(function(images) {
           $("#homepage").css("background-image", "url(" + bg + ")").css("background-size", "cover");
+          $("#pic-info-wrap").removeClass("hidden");
           $("#pic-info-url").attr("href", data['image_user_url']).text(data['image_user_name']);
         });
       }
