@@ -1,4 +1,5 @@
-body {font-family: sans-serif; background: url("../img/sayagata-400px.png") repeat; z-index: 1;}
+html {height: 100%; width: 100%;}
+body {font-family: sans-serif; background: url("../img/sayagata-400px.png") repeat; z-index: 1; height: 100%; width: 100%; background-position: center; background-attachment: fixed;}
 
 .hidden {display: none;}
 .menu-item {display: none; z-index: 3;}
