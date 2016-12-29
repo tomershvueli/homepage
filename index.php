@@ -19,6 +19,8 @@
 	<head>
 	    <title><?= $config['title']; ?></title>
 
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	    <link rel="stylesheet" type="text/css" href="hp_assets/css/font-awesome.min.css" />
 	    <link rel="stylesheet" type="text/css" href="hp_assets/css/bootstrap.min.css" />
 	    <link rel="stylesheet" type="text/css" href="hp_assets/css/main.css" />
@@ -30,11 +32,15 @@
 		<!-- Line below is to preload the font when the page loads -->
 		<span class="fa fa-asterisk" style="opacity: 0;">&nbsp;</span>
 
-		<div id="clock-wrap" class="menu-item">
+		<!-- <div id="mobile-menu-wrap" class="bg">
+			<a href="#"><span class="fa fa-bars">&nbsp;</span></a>
+		</div> -->
+
+		<div id="clock-wrap" class="menu-item bg">
 			<span id="clock"></span>
 		</div>
 
-		<div id="links-wrap" class="menu-item">
+		<div id="links-wrap" class="menu-item bg">
 			<?php
 				foreach ($config['items'] as $i => $item) {
 					$icon = $item['icon'];
@@ -45,7 +51,7 @@
 			?>
 		</div>
 
-		<div id="pic-info-wrap" class="menu-item hidden">
+		<div id="pic-info-wrap" class="menu-item hidden bg">
 			<span id="pic-info">Picture by <a href="#" id="pic-info-url"></a></span>
 		</div>
 

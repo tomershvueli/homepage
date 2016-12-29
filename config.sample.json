@@ -2,6 +2,9 @@
 	"title" : "My Homepage",
 	"unlock_pattern" : "space",
 	"clock_format" : "H:i j/n/Y",
+	"custom_url" : "",
+	"custom_url_selector" : "",
+	"custom_url_headers" : [],
 	"unsplash_client_id" : "",
 	"items" : [
 		{

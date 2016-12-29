@@ -11,7 +11,7 @@ Mousetrap.bind('esc', function() {
 Mousetrap.bind('r', function() {
   clearTimeout(randBgTimer);
   setBgImg();
-  setTimeout(setBgImg, 15000);
+  setTimeout(setBgImg, 20000);
 });
 
 Mousetrap.bind('1', function() {
@@ -123,7 +123,7 @@ function preloadimages(arr){
 }
 
 $(function() {
-  $("#mobile-menu-wrap").click(function(e) {
+  $("#mobile-menu-wrap a").click(function(e) {
     e.preventDefault();
     toggleMenu();
   });
