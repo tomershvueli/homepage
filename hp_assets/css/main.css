@@ -4,21 +4,28 @@ body {font-family: sans-serif; background: url("../img/sayagata-400px.png") repe
 .hidden {display: none;}
 .menu-item {display: none; z-index: 3;}
 
-#bg-overlay {position: absolute; width: 100%; height: 100%; background-color: #fff; opacity: 0; z-index: 2; transition: .3s all;}
+#bg-overlay {position: fixed; width: 100%; height: 100%; background-color: #fff; opacity: 0; z-index: 2; transition: .3s all;}
 body.menu-shown #bg-overlay {opacity: 0.3;}
 
 #mobile-menu-wrap {z-index: 3; position: absolute; top: 15px; left: 15px;}
-#mobile-menu-wrap a {font-size: 20px;}
+#mobile-menu-wrap a {font-size: 20px; padding: 20px 20px 20px 24px; display: block; color: #fff;}
+#mobile-menu-wrap a:hover {color: #fff;}
 
 .bg {border-radius: 5px; background-color: rgba(0, 0, 0, .5); padding: 20px;}
 .bg a {color: #fff;}
 
-#links-wrap {font-size: 80px; width: 50%; height: 50%; margin: 15% auto 0; overflow: hidden; padding: 50px; position: relative;}
+#links-wrap {font-size: 70px; width: 50%; height: 50%; margin: 25% auto 0; overflow: hidden; padding: 50px; position: relative; overflow-y: scroll;}
 #links-wrap a {transition: .3s all;}
 #links-wrap a:hover {color: #00AB00;}
-#links-wrap .link {display: inline-block; width: 33%; float: left; text-align: center;}
+#links-wrap .link {display: inline-block; float: left; text-align: center;}
 
 #pic-info-wrap {color: #fff; font-size: 16px; position: absolute; bottom: 15px; left: 15px;}
 #pic-info-wrap a:hover, #pic-info-wrap a:active {color: #fff; text-decoration: none;}
 
-#clock-wrap {color: #fff; font-size: 30px; position: absolute; top: 15px; right: 15px;}
+#clock-wrap {color: #fff; font-size: 20px; position: absolute; top: 15px; right: 15px;}
+
+@media (min-width: 992px) {
+  #links-wrap {margin-top: 15%; height: auto; font-size: 80px;}
+
+  #clock-wrap {font-size: 30px;}
+}

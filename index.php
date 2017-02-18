@@ -32,9 +32,9 @@
 		<!-- Line below is to preload the font when the page loads -->
 		<span class="fa fa-asterisk" style="opacity: 0;">&nbsp;</span>
 
-		<!-- <div id="mobile-menu-wrap" class="bg">
-			<a href="#"><span class="fa fa-bars">&nbsp;</span></a>
-		</div> -->
+		<div id="mobile-menu-wrap" class="hidden-lg">
+			<a href="#" class="bg "><span class="fa fa-bars">&nbsp;</span></a>
+		</div>
 
 		<div id="clock-wrap" class="menu-item bg">
 			<span id="clock"></span>
@@ -46,7 +46,7 @@
 					$icon = $item['icon'];
 					$link = str_replace("{{cur}}", get_current_url(), $item['link']);
 
-					echo '<div class="link col-md-4 col-sm-6"><a href="' . $link . '" title="' . $item['alt'] . '"><i class="fa fa-' . $icon . '"></i></a></div>';
+					echo '<div class="link col-md-4 col-xs-12"><a href="' . $link . '" title="' . $item['alt'] . '"><i class="fa fa-' . $icon . '"></i></a></div>';
 				}
 			?>
 		</div>
