@@ -6,6 +6,7 @@
 	"custom_url_selector" : "",
 	"custom_url_headers" : [],
 	"unsplash_client_id" : "",
+	"idle_timer" : 60000,
 	"items" : [
 		{
 			"alt" : "Facebook",

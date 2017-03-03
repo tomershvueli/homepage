@@ -27,6 +27,7 @@ Copy the config.sample.json file and rename to config.json. Be sure to update th
 ## Configure Homepage
 - 'unlock_pattern' => Choose unlock pattern from [Mousetrap](https://craig.is/killing/mice)
 - 'clock_format' => Choose pattern format from [PHP's date function](http://php.net/manual/en/function.date.php)
+- 'idle_timer' => Set a number of milliseconds here if you'd like to automatically hide the menu after a certain time of inactivity. Leave this attribute out entirely if you don't want an idle timer. 
 - 'items' => The menu will be in a grid of 3 icons per row on desktop. Insert any link you'd like, or {{cur}} for the current URL of the page. Choose icons from [Font Awesome](http://fontawesome.io/icons/)
 
 ### Unsplash Background Images

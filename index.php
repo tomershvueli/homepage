@@ -27,7 +27,7 @@
       <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	</head>
 
-	<body id="homepage" onload="updateClock(); setInterval('updateClock()', 5000);">
+	<body id="homepage">
 		<div id="bg-overlay">&nbsp;</div>
 		<!-- Line below is to preload the font when the page loads -->
 		<span class="fa fa-asterisk" style="opacity: 0;">&nbsp;</span>
@@ -68,6 +68,35 @@
 			  // Update the time display
 			  document.getElementById("clock").textContent = new Date().format("<?= $config['clock_format']; ?>");
 			}
+
+			<?php
+				// http://stackoverflow.com/a/10126042
+				if (isset($config['idle_timer'])) {
+			?>
+				var inactivityTime = function () {
+					var t;
+					window.onload = resetTimer;
+					document.onmousemove = resetTimer;
+					document.onkeypress  = resetTimer;
+					document.onmousedown = resetTimer;
+
+					function hideMenu() {
+						setMenuVisibility(false);
+					}
+
+					function resetTimer() {
+						clearTimeout(t);
+						t = setTimeout(hideMenu, <?= $config['idle_timer']; ?>)
+					}
+				};
+
+				inactivityTime();
+			<?php
+				}
+			?>
+
+			updateClock();
+			setInterval('updateClock()', 5000);
     </script>
 	</body>
 </html>
