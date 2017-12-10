@@ -7,6 +7,8 @@ It is your minimalist corner of the internet. The background will update with a 
 All the assets needed are part of the repo so it can run offline (though it won't fetch pretty background images for you). 
 
 This project uses:
+- Apache
+- PHP and PHP cURL
 - jQuery
 - Bootstrap CSS
 - Mousetrap.js
@@ -29,6 +31,8 @@ Copy the config.sample.json file and rename to config.json. Be sure to update th
 - 'clock_format' => Choose pattern format from [PHP's date function](http://php.net/manual/en/function.date.php)
 - 'idle_timer' => Set a number of milliseconds here if you'd like to automatically hide the menu after a certain time of inactivity. Leave this attribute out entirely if you don't want an idle timer. 
 - 'items' => The menu will be in a grid of 3 icons per row on desktop. Insert any link you'd like, or {{cur}} for the current URL of the page. Choose icons from [Font Awesome](http://fontawesome.io/icons/)
+
+__NOTE__: PHP cURL is required for fetching external images.
 
 ### Unsplash Background Images
 - 'unsplash_client_id' => Get Unsplash client ID from [Unsplash](https://unsplash.com/developers)
