@@ -82,12 +82,14 @@ function setBgImg() {
 
   $.getJSON("hp_assets/lib/ajax_get_image.php").done(function(data) {
     if (data['success']) {
+      let unsplashUtmPostfix = "?utm_source=homepage&utm_medium=referral";
+
       bg = data['url'];
       if (bg != "" && bg != null) {
         preloadimages([bg]).done(function(images) {
           $("#homepage").css("background-image", "url(" + bg + ")").css("background-size", "cover");
           $("#pic-info-wrap").removeClass("hidden");
-          $("#pic-info-url").attr("href", data['image_user_url']).text(data['image_user_name']);
+          $("#pic-info-url").attr("href", `${data['image_user_url']}${unsplashUtmPostfix}`).text(data['image_user_name']);
         });
       }
     }

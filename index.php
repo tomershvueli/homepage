@@ -52,7 +52,7 @@
 		</div>
 
 		<div id="pic-info-wrap" class="menu-item hidden bg">
-			<span id="pic-info">Picture by <a href="#" id="pic-info-url"></a></span>
+			<span id="pic-info">Picture by <a href="#" id="pic-info-url"></a> / <a href="https://unsplash.com/?utm_source=homepage&amp;utm_medium=referral">Unsplash</a></span>
 		</div>
 
 		<script type="text/javascript" src="hp_assets/js/jquery.min.js"></script>
