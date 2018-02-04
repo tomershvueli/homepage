@@ -1,43 +1,43 @@
 {
-	"title" : "My Homepage",
-	"unlock_pattern" : "space",
-	"clock_format" : "H:i j/n/Y",
-	"custom_url" : "",
-	"custom_url_selector" : "",
-	"custom_url_headers" : [],
-	"unsplash_client_id" : "",
-	"time_to_refresh_bg" : 20000,
-	"idle_timer" : 60000,
-	"items" : [
-		{
-			"alt" : "Facebook",
-			"icon" : "facebook",
-			"link" : "http://facebook.com"
-		},
-		{
-			"alt" : "Twitter",
-			"icon" : "twitter",
-			"link" : "http://twitter.com"
-		},
-		{
-			"alt" : "Trello",
-			"icon" : "trello",
-			"link" : "http://trello.com"
-		},
-		{
-			"alt" : "TTRSS",
-			"icon" : "rss",
-			"link" : "{{cur}}/ttrss"
-		},
-		{
-			"alt" : "phpMyAdmin",
-			"icon" : "database",
-			"link" : "{{cur}}:3306/phpMyAdmin"
-		},
-		{
-			"alt" : "Plex",
-			"icon" : "film",
-			"link" : "{{cur}}:32400/web/"
-		}
-	]
+  "title" : "My Homepage",
+  "unlock_pattern" : "space",
+  "clock_format" : "H:i j/n/Y",
+  "custom_url" : "",
+  "custom_url_selector" : "",
+  "custom_url_headers" : [],
+  "unsplash_client_id" : "",
+  "time_to_refresh_bg" : 20000,
+  "idle_timer" : 60000,
+  "items" : [
+    {
+      "alt" : "Facebook",
+      "icon" : "facebook",
+      "link" : "http://facebook.com"
+    },
+    {
+      "alt" : "Twitter",
+      "icon" : "twitter",
+      "link" : "http://twitter.com"
+    },
+    {
+      "alt" : "Trello",
+      "icon" : "trello",
+      "link" : "http://trello.com"
+    },
+    {
+      "alt" : "TTRSS",
+      "icon" : "rss",
+      "link" : "{{cur}}/ttrss"
+    },
+    {
+      "alt" : "phpMyAdmin",
+      "icon" : "database",
+      "link" : "{{cur}}:3306/phpMyAdmin"
+    },
+    {
+      "alt" : "Plex",
+      "icon" : "film",
+      "link" : "{{cur}}:32400/web/"
+    }
+  ]
 }

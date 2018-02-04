@@ -1,6 +1,6 @@
 <?php
 
-	// AJAX call to fetch a new background image
+  // AJAX call to fetch a new background image
 
   // http://stackoverflow.com/a/24707821 => use instead of file_get_contents for external URL's
   function curl_get_contents($url, $headers = null) {
@@ -42,7 +42,7 @@
     return $obj;
   }
 
-	$config = json_decode(file_get_contents(dirname(__FILE__) . "/../../config.json"), true);
+  $config = json_decode(file_get_contents(dirname(__FILE__) . "/../../config.json"), true);
 
   if (!empty($config['custom_url'])) {
     // We're fetching from a custom URL
@@ -52,15 +52,15 @@
     echo json_encode(array('success' => 1, 'url' => $image_url));
   } else if (!empty($config['unsplash_client_id'])) {
     // We're fetching from Unsplash's API
-  	$url             = "https://api.unsplash.com/photos/random?per_page=1&client_id=" . $config['unsplash_client_id'];
-  	$json            = json_decode(curl_get_contents($url), true);
-  	$image_url       = $json['urls']['regular'];
-  	$image_user_name = $json['user']['name'];
-  	$image_user_url  = $json['user']['links']['html'];
+    $url             = "https://api.unsplash.com/photos/random?per_page=1&client_id=" . $config['unsplash_client_id'];
+    $json            = json_decode(curl_get_contents($url), true);
+    $image_url       = $json['urls']['regular'];
+    $image_user_name = $json['user']['name'];
+    $image_user_url  = $json['user']['links']['html'];
 
-  	echo json_encode(array('success' => 1, 'url' => $image_url, 'image_user_name' => $image_user_name, 'image_user_url' => $image_user_url));
+    echo json_encode(array('success' => 1, 'url' => $image_url, 'image_user_name' => $image_user_name, 'image_user_url' => $image_user_url));
   }
 
-	die();
+  die();
 
 ?>
