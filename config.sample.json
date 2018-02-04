@@ -6,6 +6,7 @@
 	"custom_url_selector" : "",
 	"custom_url_headers" : [],
 	"unsplash_client_id" : "",
+	"time_to_refresh_bg" : 20000,
 	"idle_timer" : 60000,
 	"items" : [
 		{
