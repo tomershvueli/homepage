@@ -1,5 +1,7 @@
 # Homepage
 
+[![Mentioned in Awesome Selfhosted](https://awesome.re/mentioned-badge.svg)](https://github.com/Kickball/awesome-selfhosted#personal-dashboards)
+
 This project is a simple, standalone, self-hosted PHP page that is meant to be your window to your server and the web. 
 
 It is your minimalist corner of the internet. The background will update with a gorgeous (and royalty free) image from [Unsplash](https://unsplash.com/), or a custom source every 20 seconds. With it, a simple menu is available to you with your most frequented links. 
