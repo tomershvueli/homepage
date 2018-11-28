@@ -4,8 +4,9 @@
   */
 
   $default_config = array("time_to_refresh_bg" => 20000); // Make sure that we at least always have a value for this
-  $config_file = json_decode(file_get_contents("config.json"), true);
-  $config = array_merge($default_config, $config_file);
+  $config_file    = json_decode(file_get_contents("config.json"), true);
+  $config         = array_merge($default_config, $config_file);
+  unset($config['protected']); // Make sure we don't expose any protected fields to the front end
 
   function get_current_url() {
     $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";

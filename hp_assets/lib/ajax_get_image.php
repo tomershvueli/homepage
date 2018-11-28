@@ -44,15 +44,15 @@
 
   $config = json_decode(file_get_contents(dirname(__FILE__) . "/../../config.json"), true);
 
-  if (!empty($config['custom_url'])) {
+  if (!empty($config['protected']['custom_url'])) {
     // We're fetching from a custom URL
-    $json      = json_decode(curl_get_contents($config['custom_url'], $config['custom_url_headers']), true);
-    $image_url = traverse_json($json, $config['custom_url_selector']);
+    $json      = json_decode(curl_get_contents($config['protected']['custom_url'], $config['protected']['custom_url_headers']), true);
+    $image_url = traverse_json($json, $config['protected']['custom_url_selector']);
 
     echo json_encode(array('success' => 1, 'url' => $image_url));
-  } else if (!empty($config['unsplash_client_id'])) {
+  } else if (!empty($config['protected']['unsplash_client_id'])) {
     // We're fetching from Unsplash's API
-    $url             = "https://api.unsplash.com/photos/random?per_page=1&client_id=" . $config['unsplash_client_id'];
+    $url             = "https://api.unsplash.com/photos/random?per_page=1&client_id=" . $config['protected']['unsplash_client_id'];
     $json            = json_decode(curl_get_contents($url), true);
     $image_url       = $json['urls']['regular'];
     $image_user_name = $json['user']['name'];
