@@ -3,7 +3,7 @@
   * homepage
   */
 
-  $default_config = array("time_to_refresh_bg" => 20000); // Make sure that we at least always have a value for this
+  $default_config = array("time_to_refresh_bg" => 20000, "hover_color" => "#999"); // Make sure that we at least always have a value for these
   $config_file    = json_decode(file_get_contents("config.json"), true);
   $config         = array_merge($default_config, $config_file);
   unset($config['protected']); // Make sure we don't expose any protected fields to the front end
@@ -26,6 +26,9 @@
       <link rel="stylesheet" type="text/css" href="hp_assets/css/bootstrap.min.css" />
       <link rel="stylesheet" type="text/css" href="hp_assets/css/main.css" />
       <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+      <style type="text/css">
+        #links-wrap a:hover {color: <?= $config['hover_color']; ?>;}
+      </style>
   </head>
 
   <body id="homepage">

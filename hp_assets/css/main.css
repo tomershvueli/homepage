@@ -16,7 +16,6 @@ body.menu-shown #bg-overlay {opacity: 0.3;}
 
 #links-wrap {font-size: 70px; width: 50%; height: 50%; margin: 25% auto 0; overflow: hidden; padding: 50px; position: relative; overflow-y: scroll;}
 #links-wrap a {transition: .3s all;}
-#links-wrap a:hover {color: #00AB00;}
 #links-wrap .link {display: inline-block; float: left; text-align: center;}
 
 #pic-info-wrap {color: #fff; font-size: 16px; position: absolute; bottom: 15px; left: 15px;}

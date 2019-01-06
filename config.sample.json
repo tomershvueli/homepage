@@ -2,6 +2,7 @@
   "title" : "My Homepage",
   "unlock_pattern" : "space",
   "clock_format" : "H:i j/n/Y",
+  "hover_color" : "#999",
   "time_to_refresh_bg" : 20000,
   "idle_timer" : 60000,
   "items" : [
