@@ -14,7 +14,7 @@ body.menu-shown #bg-overlay {opacity: 0.3;}
 .bg {border-radius: 5px; background-color: rgba(0, 0, 0, .5); padding: 20px;}
 .bg a {color: #fff;}
 
-#links-wrap {font-size: 70px; width: 50%; height: 50%; margin: 25% auto 0; overflow: hidden; padding: 50px; position: relative; overflow-y: scroll;}
+#links-wrap {font-size: 70px; width: 50%; max-height: 50%; margin: 25% auto 0; overflow: hidden; padding: 50px; position: relative; overflow-y: scroll;}
 #links-wrap a {transition: .3s all;}
 #links-wrap .link {display: inline-block; float: left; text-align: center;}
 
@@ -23,8 +23,9 @@ body.menu-shown #bg-overlay {opacity: 0.3;}
 
 #clock-wrap {color: #fff; font-size: 20px; position: absolute; top: 15px; right: 15px;}
 
-@media (min-width: 992px) {
-  #links-wrap {margin-top: 15%; height: auto; font-size: 80px;}
-
+@media (min-width: 768px) {
+  #links-wrap {margin-top: 15%; font-size: 80px;}
+}
+@media (min-width: 576px) {
   #clock-wrap {font-size: 30px;}
 }

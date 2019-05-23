@@ -50,7 +50,7 @@
           $icon = $item['icon'];
           $link = str_replace("{{cur}}", get_current_url(), $item['link']);
 
-          echo '<div class="link col-md-4 col-xs-12"><a href="' . $link . '" title="' . $item['alt'] . '"><i class="fa fa-' . $icon . '"></i></a></div>';
+          echo '<div class="link col-md-4 col-sm-6 col-xs-12"><a href="' . $link . '" title="' . $item['alt'] . '"><i class="fa fa-' . $icon . '"></i></a></div>';
         }
       ?>
     </div>
