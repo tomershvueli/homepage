@@ -9,32 +9,38 @@
     {
       "alt" : "Facebook",
       "icon" : "facebook",
-      "link" : "http://facebook.com"
+      "link" : "http://facebook.com",
+	  "newtab" : "true"
     },
     {
       "alt" : "Twitter",
       "icon" : "twitter",
-      "link" : "http://twitter.com"
+      "link" : "http://twitter.com",
+	  "newtab" : "true"
     },
     {
       "alt" : "Trello",
       "icon" : "trello",
-      "link" : "http://trello.com"
+      "link" : "http://trello.com",
+	  "newtab" : "true"
     },
     {
       "alt" : "TTRSS",
       "icon" : "rss",
-      "link" : "{{cur}}/ttrss"
+      "link" : "{{cur}}/ttrss",
+	  "newtab" : "false"
     },
     {
       "alt" : "phpMyAdmin",
       "icon" : "database",
-      "link" : "{{cur}}:3306/phpMyAdmin"
+      "link" : "{{cur}}:3306/phpMyAdmin",
+	  "newtab" : "false"
     },
     {
       "alt" : "Plex",
       "icon" : "film",
-      "link" : "{{cur}}:32400/web/"
+      "link" : "{{cur}}:32400/web/",
+	  "newtab" : "false"
     }
   ],
   "protected": {
