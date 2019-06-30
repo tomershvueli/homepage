@@ -34,7 +34,11 @@ Copy the config.sample.json file and rename to config.json. Be sure to update th
 - 'hover_color' => The CSS color for menu items when hovered over
 - 'time_to_refresh_bg' => Time, in milliseconds, until it will fetch the next background image
 - 'idle_timer' => Set a number of milliseconds here if you'd like to automatically hide the menu after a certain time of inactivity. Leave this attribute out entirely if you don't want an idle timer. 
-- 'items' => The menu will be in a grid of 3 icons per row on desktop. Insert any link you'd like, or {{cur}} for the current URL of the page. Choose icons from [Font Awesome](http://fontawesome.io/icons/)
+- 'items' => Array of objects for links to be displayed. The menu will be in a grid of 3 icons per row on desktop. Object shape: 
+  - 'link' => Insert any link you'd like, or {{cur}} for the current URL of the page, i.e. `{{cur}}:32400/web/`. 
+  - 'icon' => Icon to be displayed, choose icons from [Font Awesome](http://fontawesome.io/icons/). 
+  - 'alt' => Value for `title` of anchor tag. 
+  - 'new_tab' => Optional boolean value for whether link should open in new tab or current tab. 
 
 __NOTE__: PHP cURL is required for fetching external images.
 

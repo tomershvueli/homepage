@@ -9,17 +9,20 @@
     {
       "alt" : "Facebook",
       "icon" : "facebook",
-      "link" : "http://facebook.com"
+      "link" : "http://facebook.com",
+      "new_tab" : true
     },
     {
       "alt" : "Twitter",
       "icon" : "twitter",
-      "link" : "http://twitter.com"
+      "link" : "http://twitter.com",
+      "new_tab" : true
     },
     {
       "alt" : "Trello",
       "icon" : "trello",
-      "link" : "http://trello.com"
+      "link" : "http://trello.com",
+      "new_tab" : true
     },
     {
       "alt" : "TTRSS",
