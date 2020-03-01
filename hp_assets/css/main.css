@@ -17,6 +17,8 @@ body.menu-shown #bg-overlay {opacity: 0.3;}
 #links-wrap {font-size: 70px; width: 50%; max-height: 50%; margin: 25% auto 0; overflow: hidden; padding: 50px; position: relative; overflow-y: scroll;}
 #links-wrap a {transition: .3s all;}
 #links-wrap .link {display: inline-block; float: left; text-align: center;}
+#links-wrap .link img {opacity: .8; transition: .3s all;}
+#links-wrap .link img:hover {opacity: 1;}
 
 #pic-info-wrap {color: #fff; font-size: 16px; position: absolute; bottom: 15px; left: 15px;}
 #pic-info-wrap a:hover, #pic-info-wrap a:active {color: #fff; text-decoration: none;}
