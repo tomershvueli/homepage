@@ -1,2 +1,4 @@
 .DS_Store
 config.json
+hp_assets/img/*
+!hp_assets/img/sayagata-400px.png
