@@ -5,6 +5,7 @@
   "hover_color" : "#999",
   "time_to_refresh_bg" : 20000,
   "idle_timer" : 60000,
+  "show_menu_on_page_load": false,
   "items" : [
     {
       "alt" : "Facebook",

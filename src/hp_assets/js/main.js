@@ -1,4 +1,4 @@
-let menuHidden = true;
+let menuHidden = $.config.show_menu_on_page_load;
 let randBgTimer = null;
 
 // Simulates PHP's date function - http://jacwright.com/projects/javascript/date_format/
@@ -40,11 +40,11 @@ function toggleMenu() {
 
 function setMenuVisibility(visible) {
   if (visible) {
-    $(".menu-item").fadeIn();
+    $(".menu-item").fadeIn(250);
     $("body").addClass("menu-shown");
     menuHidden = false;
   } else {
-    $(".menu-item").fadeOut();
+    $(".menu-item").fadeOut(250);
     $("body").removeClass("menu-shown");
     menuHidden = true;
   }
@@ -136,4 +136,5 @@ $(function() {
 
   updateClock();
   setInterval('updateClock()', 1000);
+  setMenuVisibility(menuHidden); // Set menu visibility on page load
 });
