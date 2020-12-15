@@ -9,6 +9,11 @@
     "time_to_refresh_bg" => 20000,
     "hover_color" => "#999"
   );
+
+  if (!file_exists('config.json')) {
+      header("Location: error.php?message=config.json was not found");
+  }
+
   $config_file    = json_decode(file_get_contents("config.json"), true);
   $config         = array_merge($default_config, $config_file);
   unset($config['protected']); // Make sure we don't expose any protected fields to the front end
