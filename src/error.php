@@ -1,3 +1,7 @@
+<?php
+    require_once "enums/BaseEnum.php";
+    require_once "enums/ErrorCode.php";
+?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -17,10 +21,26 @@
 </head>
 
 <body id="homepage">
-<div id="bg-overlay">&nbsp;</div>
+<main class="bg" style="width: 50%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); color: darkred; font-size: 20px;">
+    <?php
+        if ($_REQUEST['messages']) {
+            $messages = explode(',', $_REQUEST['messages']);
 
-<main id="links-wrap" class="bg">
-    <?php print $_REQUEST['message'] ? $_REQUEST['message'] : "An error occured" ?>
+            $translation = include('resources/lang/en.php');
+
+            foreach ($messages as $message) {
+                if (ErrorCode::isValidValue($message)) {
+                    print ($translation[$message] ?? 'An Error occured') . '<br/>';
+                }
+            }
+
+        } else {
+            print "An error occured";
+        }
+
+    ?>
+
+    <a href="index.php" style="color: white; font-size: 12px;">Back to Homepage</a>
 </main>
 
 </body>

@@ -3,6 +3,9 @@
   * homepage
   */
 
+    require_once "enums/BaseEnum.php";
+    require_once "enums/ErrorCode.php";
+
   // Make sure that we at least always have a value for these config values
   $default_config = array(
     "show_menu_on_page_load" => false,
@@ -11,7 +14,7 @@
   );
 
   if (!file_exists('config.json')) {
-      header("Location: error.php?message=config.json was not found");
+      header("Location: error.php?messages=" . ErrorCode::CONFIG_NOT_FOUND);
   }
 
   $config_file    = json_decode(file_get_contents("config.json"), true);
