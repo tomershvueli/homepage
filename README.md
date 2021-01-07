@@ -47,6 +47,8 @@ __NOTE__: PHP cURL is required for fetching external images.
 ### Unsplash Background Images
 - `unsplash_client_id` => Get Unsplash client ID from [Unsplash](https://unsplash.com/developers)
 
+__NOTE__: There [have been reports](https://github.com/tomershvueli/homepage/issues/24#issuecomment-754450034) that applying for a Normal API upgrading from a demo API will result in Unsplash shutting down your API key entirely. I suggest sticking to the demo API key and setting the `time_to_refresh_bg` config variable to `90000`. This will ensure that you don't surpass the 50 hourly requests that Unsplash provides for demo API keys. Or feel free to use a custom background image (see below). 
+
 ### Custom Background Images
 - `custom_url` => Input a custom URL that will return proper JSON
 - `custom_url_headers` => Add any headers that may be needed to complete a cURL request to the aforementioned URL properly
