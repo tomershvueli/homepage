@@ -53,3 +53,11 @@ __NOTE__: There [have been reports](https://github.com/tomershvueli/homepage/iss
 - `custom_url` => Input a custom URL that will return proper JSON
 - `custom_url_headers` => Add any headers that may be needed to complete a cURL request to the aforementioned URL properly
 - `custom_url_selector` => Input a proper PHP array selector to be used on the JSON received above. For example, if I were to fetch from Github's user API with a 'custom_url' of 'https://api.github.com/users/octocat', the 'custom_url_selector' would simply be `['avatar_url']`. `[{random}]` can be replaced for a random index in an array. 
+
+## Supporting
+
+If you enjoy homepage and want to support the project, you can buy me a Ko-Fi! 
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D41JRJE)
+
+Or, feel free to [contribute to homepage](CONTRIBUTING.md) by creating a PR to expand on features that you think are missing! 
