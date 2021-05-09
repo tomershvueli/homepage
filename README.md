@@ -50,7 +50,7 @@ __NOTE__: PHP cURL is required for fetching external images.
 __NOTE__: There [have been reports](https://github.com/tomershvueli/homepage/issues/24#issuecomment-754450034) that applying for a Normal API upgrading from a demo API will result in Unsplash shutting down your API key entirely. I suggest sticking to the demo API key and setting the `time_to_refresh_bg` config variable to `90000`. This will ensure that you don't surpass the 50 hourly requests that Unsplash provides for demo API keys. Or feel free to use a custom background image (see below). 
 
 ### Custom Background Images
-- `custom_url` => Input a custom URL that will return proper JSON
+- `custom_url` => Input a custom URL that will return proper JSON. Supports `{{cur}}` substitution for current URL. 
 - `custom_url_headers` => Add any headers that may be needed to complete a cURL request to the aforementioned URL properly
 - `custom_url_selector` => Input a proper PHP array selector to be used on the JSON received above. For example, if I were to fetch from Github's user API with a 'custom_url' of 'https://api.github.com/users/octocat', the 'custom_url_selector' would simply be `['avatar_url']`. `[{random}]` can be replaced for a random index in an array. 
 

@@ -42,12 +42,19 @@
     return $obj;
   }
 
+  function get_current_url() {
+    $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $domainName = $_SERVER['SERVER_NAME'];
+    return $protocol . $domainName;
+  }
+
   $config = json_decode(file_get_contents(dirname(__FILE__) . "/../../config.json"), true);
 
   if (!empty($config['protected']['custom_url'])) {
     // We're fetching from a custom URL
-    $json      = json_decode(curl_get_contents($config['protected']['custom_url'], $config['protected']['custom_url_headers']), true);
-    $image_url = traverse_json($json, $config['protected']['custom_url_selector']);
+    $custom_url = str_replace("{{cur}}", get_current_url(), $config['protected']['custom_url']);
+    $json       = json_decode(curl_get_contents($custom_url, $config['protected']['custom_url_headers']), true);
+    $image_url  = traverse_json($json, $config['protected']['custom_url_selector']);
 
     echo json_encode(array('success' => 1, 'url' => $image_url));
   } else if (!empty($config['protected']['unsplash_client_id'])) {
