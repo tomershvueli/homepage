@@ -3,12 +3,20 @@
   * homepage
   */
 
+    require_once "enums/BaseEnum.php";
+    require_once "enums/ErrorCode.php";
+
   // Make sure that we at least always have a value for these config values
   $default_config = array(
     "show_menu_on_page_load" => false,
     "time_to_refresh_bg" => 20000,
     "hover_color" => "#999"
   );
+
+  if (!file_exists('config.json')) {
+      header("Location: error.php?messages=" . ErrorCode::CONFIG_NOT_FOUND);
+  }
+
   $config_file    = json_decode(file_get_contents("config.json"), true);
   $config         = array_merge($default_config, $config_file);
   unset($config['protected']); // Make sure we don't expose any protected fields to the front end
@@ -59,7 +67,7 @@
         foreach ($config['items'] as $i => $item) {
           $icon_or_img = $item['icon'] ? "<i class=\"fa fa-{$item['icon']}\"></i>" : "<img src=\"hp_assets/img/{$item['img']}\" height=\"80\" width=\"80\" alt=\"{$item['alt']}\" loading=\"lazy\" />";
           $link = str_replace("{{cur}}", get_current_url(), $item['link']);
-          $target = $item['new_tab'] ? " target=\"_blank\" rel=\"noopener noreferrer\"" : "";
+          $target = isset($item['new_tab']) && $item['new_tab'] ? " target=\"_blank\" rel=\"noopener noreferrer\"" : "";
 
           echo "<div class=\"link col-md-4 col-sm-6 col-xs-12\"><a href=\"{$link}\" title=\"{$item['alt']}\"{$target}>{$icon_or_img}</a></div>";
         }
